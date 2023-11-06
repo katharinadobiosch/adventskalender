@@ -2,8 +2,6 @@
   font-family: "Candcu"; /* You can give it a custom name */
   src: url("/Candcu__.ttf") format("truetype");
   /* src: url("/PWHappyChristmas.ttf") format("truetype"); */
-
-  /* Add additional formats if your font comes in different file types */
   font-weight: normal;
   font-style: normal;
 }
@@ -27,7 +25,7 @@ body {
 .advent-calendar-container {
   display: flex;
   justify-content: center;
-  padding: 100px 0;
+  padding-top: 100px;
 }
 
 .fixed-background {
@@ -46,66 +44,82 @@ body {
   position: relative;
   overflow: auto;
   height: 100%;
-  padding: 50px 20px;
-  width: 50%;
+  padding: 20px;
+  width: 80%;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
 }
 
 @-webkit-keyframes shake {
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
+    opacity: 1;
   }
   20% {
     -webkit-transform: rotate(-20deg);
     transform: rotate(-20deg);
+    opacity: 1;
   }
   40% {
     -webkit-transform: rotate(20deg);
     transform: rotate(20deg);
+    opacity: 1;
   }
   60% {
     -webkit-transform: rotate(-10deg);
     transform: rotate(-10deg);
+    opacity: 1;
   }
   80% {
     -webkit-transform: rotate(10deg);
     transform: rotate(10deg);
+    opacity: 1;
   }
   100% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
+    opacity: 0;
+    visibility: none;
   }
 }
-
 @keyframes shake {
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
+    opacity: 1;
   }
   20% {
     -webkit-transform: rotate(-20deg);
     transform: rotate(-20deg);
+    opacity: 1;
   }
   40% {
     -webkit-transform: rotate(20deg);
     transform: rotate(20deg);
+    opacity: 1;
   }
   60% {
     -webkit-transform: rotate(-10deg);
     transform: rotate(-10deg);
+    opacity: 1;
   }
   80% {
     -webkit-transform: rotate(10deg);
     transform: rotate(10deg);
+    opacity: 1;
   }
   100% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
+    opacity: 0;
+    visibility: none;
   }
 }
 
-#main {
+ChatGPT To #main {
   text-align: center;
   padding: 1em;
 }
@@ -118,8 +132,8 @@ body {
 
 .article {
   display: inline-block;
-  width: 9em;
-  height: 20em;
+  width: 15em;
+  height: 15em;
   margin: 0.5em;
   -webkit-perspective: 850px;
   perspective: 850px;
@@ -175,8 +189,8 @@ body {
   backface-visibility: hidden;
 }
 .article:hover .bauble {
-  -webkit-animation: shake 1s;
-  animation: shake 1s;
+  -webkit-animation: shake 1.5s;
+  animation: shake 1.5s;
   -webkit-transform-origin: 50% 0;
   transform-origin: 50% 0;
 }
@@ -196,7 +210,7 @@ body {
   width: 4.75em;
   height: 4.75em;
   background: #a94b61;
-  margin: 45% auto 0 auto;
+  margin: 25% auto 0 auto;
   font-size: 2em;
   font-weight: bold;
   line-height: 2.75em;
@@ -206,7 +220,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 .bauble:after {
   content: "";
   position: absolute;
@@ -217,7 +230,6 @@ body {
   height: 10%;
   background: inherit;
 }
-
 .bauble:before {
   content: "";
   width: 12%;
@@ -230,20 +242,17 @@ body {
   border: 0.35rem solid #a94b61;
   z-index: 0;
 }
-
 .article:hover .box.closedDoor {
   transform: none;
 }
-
 .door-container {
-  display: flex; /* Display doors in a row */
-  flex-wrap: nowrap; /* Prevent wrapping to the next row */
-  justify-content: space-between; /* Distribute space between doors */
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
 
-.article {
-  width: calc(
-    33.33% - 20px
-  ); /* Each door takes up 33.33% width with some margin */
-  margin-right: 10px;
+#adventBoxes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
